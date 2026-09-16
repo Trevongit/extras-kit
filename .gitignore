@@ -1,0 +1,5 @@
+receipt/
+*.env
+agent.env
+*.pem
+.DS_Store

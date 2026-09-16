@@ -1,0 +1,30 @@
+# Pointers only. Do not vendor Hermit, target/, or nsec.
+# Bump sha when extras-kit should follow a new extras push.
+
+[kit]
+name = "extras-kit"
+target = "linux"
+
+[modules.extras]
+github = "Trevongit/buzz"
+branch = "feat/origin-plus-enhancements"
+sha = "8744ac458"
+note = "Visitor kit + presence. Not a Desktop rebuild. Wait for origin 0.5.24 to merge Block main."
+
+[modules.visitor]
+path_in_extras = "scripts/visitor"
+bring = "scripts/visitor/bring.sh"
+inbox = "scripts/visitor/buzz-inbox.sh"
+presence = "scripts/visitor/visitor-presence.sh"
+
+[modules.skills]
+grok = ["use-buzz", "extras-inbox-ear", "use-kitty", "visitor-collab"]
+codex = ["buzz-visitor", "use-buzz-codex"]
+agy = ["buzz-visitor"]
+
+[refuse]
+mint = true
+copy_agent_env = true
+extra_channels_plus_feed = true
+curl_bash = true
+compile_on_deploy_host = true
